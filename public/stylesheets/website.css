@@ -1,0 +1,406 @@
+#homeFormat{
+	background:url(/images/banana.jpg);
+	background-size: cover;
+	font-family: 'Lato', sans-serif;
+	background-color: rgb(250, 249, 248);
+	color: black;
+
+}
+
+@media only screen and (min-width: 1900px){
+	#bigScreen{
+		margin-right: -280px;
+		margin-left: -280px;
+		font-size: 16px;
+	}
+}
+
+
+#aboutMe{
+	background: rgb(250, 249, 248);
+	font-family: 'Lato', sans-serif;
+
+}
+
+.header{
+	text-align: center;
+	font-weight: 300;
+}
+
+.newPost{
+	font-weight: 300;
+	text-align: center;
+}
+
+.postTextArea{
+	border-bottom-left-radius: .28571429rem;
+	border-bottom-right-radius: .28571429rem;
+	border: 1px solid rgba(34,36,38,.15);
+}
+
+.postInput{
+	margin-top: 10px;
+}
+
+.createPost{
+	border: 5px solid red;
+}
+
+.jumbotron{
+	background-color: white !important;
+	border: 1px solid darkgrey;
+}
+
+.posts{
+	margin-top: 20px;
+	border: 1px solid rgba(34,36,38,.15);
+	padding: 10px;
+	border-radius: .28571429rem;
+}
+
+.postImage{
+	border-radius: .28571429rem;
+	float: left;
+}
+
+.postTitle{
+	padding-left: 115px;
+	font-weight: 400;
+}
+
+.postHr{
+	margin-top: 20px;
+	border-top: 1px solid grey;
+}
+
+.username{
+	font-size: 1em !important;
+	color: grey;
+}
+
+.goldCrown{
+	color: orange;
+}
+
+#floatedButt{
+	float: left;
+	margin-top: 5px;
+}
+
+#deleteButt{
+	display: inline;
+}
+
+#removeButt{
+	margin-top: 5px;
+}
+
+#postPrev{
+	font-size:1.3em;
+}
+#postSep{
+	border-top: 1px solid black;
+}
+
+.indexAuthor{
+	font-size: 1em !important;
+	margin-top: 7px !important;
+	color:grey;
+}
+
+h2{
+	font-weight: 400;
+	
+}
+
+.signUpForm{
+	text-align: center;
+}
+
+#titleFormat{
+	margin-top: 50px;
+}
+
+#commentAuthor{
+	font-size: 0.8em;
+	font-weight: 700;
+}
+
+#commentText{
+	font-size: 1.1em;
+}
+
+#commentsTitle{
+	text-decoration: underline;
+	margin-top: 20px;
+}
+
+#commentJumbo{
+	background-color: rgb(250, 240, 248) !important;
+}
+
+#commentHr{
+	border-top: 1px solid #c5c5c5;
+}
+
+#titleHr{
+	border-top: 1px solid #c5c5c5;
+}
+
+#leaveComment{
+	margin-top: -100px;
+}
+
+.h2Reduce{
+	margin-top: 50px;
+}
+
+.showButtons{
+	float: right;
+}
+
+.markdown{
+	border: 1px solid rgba(34,36,38,.15);
+	border-top-left-radius: .28571429rem;
+	border-top-right-radius: .28571429rem;
+	padding: 1%;
+	
+}
+
+
+#myPhoto{
+	width: 80%;
+	border-radius: 50%;
+	margin-top: 20px;
+}
+
+.blackHr{
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.projectHr{
+	margin-top: 10px;
+}
+
+.saveAdjust{
+	margin-top: 10px !important;
+}
+
+#prevP{
+	margin-top: 70px;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 25%;
+  left: 37%;
+  margin-bottom: 1px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(58,48,48,0.7);
+}
+
+.test {
+  position: relative;
+  width: 50%;
+}
+
+.test:hover .overlay {
+  opacity: 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+html{
+	height: 100%;
+}
+
+#content{
+	text-align: center;
+	padding-top: 25%;
+	text-shadow: 0px 4px 3px rgba(181,191,206,0.4), 
+				 0px 8px 13px rgba(181,191,206,0.1),
+				 0px 18px 23px rgba(181,191,206,0.2);
+				 /*x y z offsets of shadow*/
+	text-transform: uppercase;
+	letter-spacing: 10px;
+}
+
+
+h1{
+	font-weight: 700;
+	font-size: 5em;
+}
+
+#logos{
+	position: absolute;
+	bottom: 10px;
+	right: 	10px;
+}
+
+.logoAnchor{
+	color: black;
+}
+
+
+#homeHr{
+	width: 400px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid rgba(0,0,0,0.2)
+}
+
+.aboutmeText{
+	font-size: 2em;
+	font-weight: 400;
+}
+
+#links{
+	font-size: 2em;	
+}
+
+#aboutmeContent{
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+#linkedin{
+	color: rgb(0, 119, 181);
+}
+
+#github{
+	color: rgb(88, 40, 121);
+}
+
+#postDatePos{
+	margin-top: 10px;
+}
+
+.bar{
+	border-left: 3px solid #333;
+	padding-left: 5px;	
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: black !important;
+}
+
+.navbar-inverse .navbar-brand {
+    color: black !important ;
+}
+
+.navbar {
+    border-radius: 0px;
+    border: none !important;
+    min-height: 60px !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: rgb(51,51,51);
+    background-color: rgb(250, 249, 248);
+    border: 2px solid rgb(250, 249, 248);
+
+}
+
+.homeNav{
+	background-color: #ffffff00 !important;
+	border-bottom: 1px solid grey !important;
+}
+
+
+.navMargin{
+	margin-left: 30px !important;
+	margin-right: 30px !important;
+}
+
+.navbar-nav > li > a {
+    padding-top: 25% !important;
+}
+
+.navName{
+	margin-left: 25%;
+}
+
+.weirdMargin{
+	margin-top: -3px;
+}
+
+/*.navbar-nav > li > a{
+	line-height: 40px;
+}
+*/
+
+.navPad{
+	padding-bottom: 3px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-brand {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.lastNav{
+	border-left: 1px solid grey;
+}
+
+.navHover:hover{
+	/*border-bottom: 1px solid white;*/
+	text-decoration: overline;
+	text-decoration: underline;
+
+
+}
+
+.linkAnchor{
+	color: inherit;
+}
+
+.linkAnchor:hover{
+	text-decoration: none;
+}
+
+/*a{
+	color: inherit;
+}
+
+a:hover{
+	text-decoration: none;
+	
+}*/
+
+.signIn{
+	margin-top: 20px;
+	border: 1px solid green;
+	border-radius: .28571429rem;
+}
+
+.loginHeader{
+	text-align: left;
+    font-weight: 700;
+    margin-top: 10px;
+}

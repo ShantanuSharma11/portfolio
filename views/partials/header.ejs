@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/website.css">
+    <link rel="stylesheet" href="/lib/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+	<title>shantanu sharma</title>
+</head>
+<body id="homeFormat">
+
+<nav class="navbar navbar-inverse homeNav">
+  <div class = "navMargin">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><strong>Shantanu Sharma <div class="navName">Portfolio</div></strong></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       
+    
+        
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="lastNav  navHover navPad"><a href="/memory-game">Games</a></li>
+        <li class="navHover"><a href="/forum">Forum</a></li>
+        <li class="navHover"><a href="/about">About</a></li>
+        <% if(!currentUser){ %>
+          <li class="navHover"><a href="/login">Log In </a></li>
+          <li class="navHover weirdMargin"><a href="/register">Sign Up </a></li>
+        <% } else{ %>
+          <li class="navHover weirdMargin"><a href="/logout">Logout</a></li>
+        <% } %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+    
+    <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+    <% } %>

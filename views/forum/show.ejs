@@ -1,0 +1,93 @@
+<% include ../partials/header %>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-lg-4">
+             <% if(post.image == 0){ %>
+                <a href="#" class="thumbnail">
+                    <img src= "/images/noImage.jpg">
+                </a>
+             <% } else { %>
+                <a href="<%= post.image %>" class="thumbnail">
+                    <img src="<%= post.image %>" alt="...">
+                </a>
+               <% } %>   
+            
+            </div>
+            <div class="col-lg-8" id="titleFormat">
+                <h2 class="h2Reduce"><%= post.title %></h2>
+                <% if(post.author.username == "NikHowe"){ %>
+                    <em><p class="username">Posted by <%= post.author.username %> <i class="fas fa-crown goldCrown"></i></p></em>
+                <% } else { %>
+                    <em><p class="username">Posted by <%= post.author.username %></p></em>
+                <% } %>
+                
+                <% if(currentUser && (post.author.id.equals(currentUser._id) || currentUser.username == "NikHowe")){ %>
+                    <a href="/forum/<%= post._id %>/edit"><button class="tiny ui button" id="floatedButt">Edit Post</button></a>
+                        <form action="/forum/<%= post._id %>?_method=DELETE" method="POST">
+                            <button class=" tiny ui button" id="removeButt">Remove Post</button>
+                        </form>
+                <% } %>
+                    
+                <hr id="titleHr">
+                <a href="/forum">Go back</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p><%- post.text %></p>
+            </div>
+        </div>
+        <div class="text-right" id="postDatePos"><%= post.created.toDateString() %></div>
+    
+    </div>
+    
+    <div class="jumbotron" id="commentJumbo">
+        <div class="text-right">
+            <a href="/forum/<%= post._id%>/comments/new"><button class="ui green button" id="leaveComment">Add New Comment</button></a>
+        </div>
+        
+        <div id="commentsTitle">Comments</div>
+        <hr>
+        
+        <% if(post.comments.length === 0){ %>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>(No Comments)</p>
+                </div>
+            </div>
+        <% } %>
+        
+        <% post.comments.forEach(function(comment){ %>
+            <div class="row">
+                <div class="col-lg-12">
+                   <p id="commentAuthor">
+                    <% if(comment.author.username == "NikHowe"){ %>
+                        <em><strong><%= comment.author.username %></strong> <i class="fas fa-crown goldCrown"></i></em>
+                    <% } else { %>
+                        <em><strong><%= comment.author.username %></strong></em>
+                    <% } %>
+                        <span class="pull-right"><%= comment.created.toDateString() %></span>
+                   </p>
+                   <p id="commentText">
+                       <%= comment.text %>
+                   </p>
+                <% if(currentUser && (comment.author.id.equals(currentUser._id) || currentUser.username == "NikHowe")){ %>
+                       <a class="btn btn-xs btn-warning"
+                        href="/forum/<%=post._id%>/comments/<%=comment._id%>/edit">Edit
+                       </a>
+                       <form id="deleteButt" action="/forum/<%=post._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                           <input type="submit" class="btn btn-xs btn-danger" value="Remove">
+                       </form>
+                <% } %>
+                   <hr id="commentHr">
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>

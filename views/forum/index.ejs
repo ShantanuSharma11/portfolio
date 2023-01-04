@@ -1,0 +1,46 @@
+<% include ../partials/header %>
+<div class="container">
+    <h1 class="newPost">Welcome to the forum!</h1>
+    <hr class="blackHr">
+    
+    <div class="jumbotron">
+    <a href="/forum/new"><button class="fluid ui blue button"><h2 class="newPost">Create Post</h2></button></a>
+        
+        <% forumPosts.forEach(function(post){ %>
+        <div class="posts">
+        <div class="row">
+            <a href="/forum/<%= post._id %>" class="logoAnchor">
+                <div class=" col-lg-12">
+                    <% if(post.image == 0){ %>
+                        <img src= "/images/noImage.jpg" height="70" width="100" class="postImage">
+                    <% } else { %>
+                        <img src="<%= post.image %>" height="70" width="100" class="postImage">
+                    <% } %>
+                    <h2 class="postTitle"><%= post.title %></h2>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <% if(post.author.username == "NikHowe"){ %>
+                    <em><p class="indexAuthor">Posted by <%= post.author.username %> <i class="fas fa-crown goldCrown"></i></p></em>
+                <% } else { %>
+                    <em><p class="indexAuthor">Posted by <%= post.author.username %></p></em>
+                <% } %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <hr class="postHr">
+                <div>
+                    <p id="postPrev"><%- post.text.substring(0, 100) %>...</p>
+                    <a href="/forum/<%= post._id %>">read more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

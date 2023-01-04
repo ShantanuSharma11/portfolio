@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+
+<div class="ui container">
+    <h1 class="newPost">Add New Comment</h1>
+    <hr class="blackHr">
+    
+    <div class="jumbotron postJumbo">
+        <form action="/forum/<%= post._id %>/comments" method="POST">
+            <div class="markdown postInput"><strong>Markdown text <i class="fas fa-level-down-alt"></i></strong></div>
+            <div>
+                <textarea name = "comment[text]" rows="15" cols:"50" style="width:100%" class="postTextArea" required></textarea>
+            </div>
+            <div class="ui buttons saveAdjust">
+                <button class="ui positive button" type="submit">Submit</button>
+                <div class="or"></div>
+                <button class="ui button" type="reset"><a href="/forum/<%= post._id %>">Cancel</a></button>
+                
+            </div>
+                <!--<input type="text" name="text" placeholder="text">-->
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>

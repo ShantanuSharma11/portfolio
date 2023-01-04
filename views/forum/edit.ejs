@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<div class="ui container">
+    <h1 class="newPost">Edit: <%= post.title %></h1>
+    <hr class="blackHr">
+    
+    <div class="jumbotron postJumbo">
+    
+        <form action="/forum/<%= post._id %>?_method=PUT" method="POST">
+            <div class="ui fluid icon input postInput">
+                <input type="text" name="post[title]" placeholder="Title" value="<%= post.title %>">
+            </div>
+            <div class="ui fluid icon input postInput">
+                <input type="text" name="post[image]" placeholder="Image" value="<%= post.image %>">
+            </div>
+            <div class="markdown postInput"><strong>Markdown text <i class="fas fa-level-down-alt"></i></strong></div>
+            <div>
+                <textarea name="post[text]" rows="15" cols:"50" style="width:100%" class="postTextArea"><%= post.text%></textarea>
+            </div>
+            <div class="ui buttons saveAdjust">
+                <button class="ui positive button" type="submit">Save</button>
+                <div class="or"></div>
+                <a href="/forum"><button class="ui button">Cancel</button></a>
+            </div>
+        </form>
+    
+    </div>
+</div>
+
+<% include ../partials/footer %>
+
+

@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 class="newPost">Sign Up</h1>
+        <hr class="blackHr">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 signUpForm">
+            <div class="jumbotron postJumbo">
+                <form action="/register" method="POST">
+                    <div class="loginHeader">Email (optional)</div>
+                    <div class="fluid ui icon input postInput">
+                    <input type="email" name="emailaddress" placeholder="email">
+                    </div>
+                    <div class="loginHeader">Username</div>
+                    <div class="fluid ui icon input postInput">
+                    <input type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="loginHeader">Password</div>
+                    <div class="fluid ui icon input postInput">
+                    <input type="password" name="password" placeholder="password">
+                    </div>
+                    <div class="signIn"><button class="fluid ui green button">Sign Up</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>
