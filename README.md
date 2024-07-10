@@ -5,11 +5,6 @@
 ![Screenshot (30)](https://github.com/ShantanuSharma11/portfolio/assets/97371684/2ea5a8bf-3e75-47eb-bdb9-a99c0633d645)
 
 
-
-
-
-
-
 # portfolio-website
 RESTFUL Express app using Node and Mongo
 
